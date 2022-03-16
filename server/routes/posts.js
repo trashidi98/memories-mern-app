@@ -1,12 +1,13 @@
 import express from 'express'; 
+import {getPosts, createPost} from "../controllers/posts.js";
 
 const router = express.Router(); 
 
 // Activates when someone accesses the page
-router.get('/', (req, res) => {
+router.get('/', getPosts); 
 
-    res.send("This works!");
+router.post('/', createPost);
 
-}); 
+
 
 export default router; 
