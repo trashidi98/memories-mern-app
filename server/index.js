@@ -21,6 +21,10 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 // Get to use cloud atlas mongoDB
+
+app.get('/', (req, res) => {
+    res.send("Welcome to memories API"); 
+}); 
  
 const PORT = process.env.PORT || 5000; 
 
